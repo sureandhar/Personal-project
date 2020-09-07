@@ -1,0 +1,128 @@
+.main{
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+}
+#title{
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+}
+#btn{
+    background: transparent;
+    padding: 20px;
+    font-size: 30px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btn:hover{
+    color: white;
+    /* background-color: tomato; */
+    background-color: #aaaa;
+    animation: btn-color 0.3s ease;
+}
+@keyframes btn-color{
+    0%{
+        /* background-color: #aaaa; */
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        /* background-color: #aaa; */
+    }
+}
+
+.col{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.column{
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    display: inline-block;
+    justify-content: center;
+    /* align-items: center; */
+    box-sizing: border-box;
+}
+.grid{
+ 
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 10px;
+    
+    /* background-color: violet; */
+    border: 1px solid #aaaa;
+}
+
+#base-1{
+    background-color: violet;
+}
+#base-2{
+    background-color: #16dddd;
+}
+#base-3{
+    background-color: #cc602e;
+}
+#base-4{
+    background-color: #d1ee82;
+}
+#base-5{
+    background-color: #7c607c;
+}
+body{
+    background-color: #eee;
+}
+
+.top{
+ grid-area: top;
+ text-align: center;
+ height: 100px;
+ /* background-color: chartreuse; */
+}
+.middle{
+    grid-area: middle;
+    margin: 2% 25%;
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    /* background-color: rgb(0, 195, 255); */
+}
+.bottom{
+    grid-area: bottom;
+    text-align: center;
+    /* background-color: rgb(255, 166, 0); */
+}
+
+.wrapper{
+    display: grid;
+    grid-template-areas: 'top top top top top top'
+    'middle middle middle middle middle middle'
+    'bottom bottom bottom bottom bottom bottom';
+    justify-content: center;
+}
+/* @media (min-width:400px){
+    #title{
+        font-size: 40px;
+        text-align: center;
+    }
+    .grid{
+        padding: 2px;
+        margin: 5px;
+    }
+    .column{
+        width: 300px;
+    }
+    .middle{
+        margin: 10% 10%;
+    }
+    .colorgrid{
+        width: 300px;
+    }
+} */
