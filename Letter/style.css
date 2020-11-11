@@ -1,0 +1,177 @@
+body{
+    padding: 4% 0%;
+    max-width: 1000px;
+    margin: 0% auto;
+    /* background-color:gray; */
+    
+}
+.cover{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.normal{
+    position: absolute;
+    top:30%;
+    left: 45%;
+    right: 50%;
+    bottom: 50%;
+   
+    width: 300px;
+    height: 300px;
+    
+    
+}
+.card{
+    position: absolute;
+    width: 250px;
+    height: 175px;
+    border-radius: 10px;
+}
+.one{
+    overflow: hidden;
+    box-shadow: 0 2px 5px 2.5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/kanyakumarai.jfif);
+}
+.incard{
+    position: absolute;
+    display: none;
+    text-align: justify;
+}
+.incard p{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size:10px;
+    padding: 10px;
+}
+.name{
+    text-align: center;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top:140px;
+    width:100%;
+    height:100%;
+    background-color: white;
+    
+}
+
+.normal:hover .one{
+    width: 0px;
+    height:0px;
+    /* background-color:blue; */
+    /* border-top:130px solid black; */
+    border-top:130px solid black;
+    border-bottom:50px solid  transparent;
+    border-left:125px solid  transparent;
+    border-right:125px solid  transparent;
+    /* animation: open 0.5s ease-in forwards; */
+    /* transform-origin:bottom; */
+    /* transform:rotateX(150deg) */
+}
+
+
+.normal:hover .two{
+    width: 0px;
+    height:0px;
+    /* background-color:blue; */
+    /* border-top:130px solid black; */
+    border-top: 130px solid transparent;
+    border-bottom:50px solid  blue;
+    border-left:125px solid  blue;
+    border-right:125px solid  blue;
+    /* border-color:blue; */
+    /* animation: color 0.5s ease-in forwards; */
+    /* transition:background-color 2s ease-in; */
+
+}
+ .normal:hover .three{
+    position: absolute;
+    top: 0px;
+    width: 0px;
+    height:0px;
+    /* background-color:blue; */
+    /* border-top:130px solid black; */
+    border-top:125px solid black;
+    border-bottom:130px solid  transparent;
+    border-left:125px solid  transparent;
+    border-right:125px solid  transparent;
+    animation: open 0.25s ease-in  forwards;
+
+    perspective: 100px;
+    transform-style: preserve-3d;
+    transform-origin:top;
+    /* transform-origin:bottom; */
+    /* transform:rotateX(0deg) */
+    
+}
+.normal:hover .four{
+    display: hidden;
+    position: absolute;
+    top: -250px;
+    border-top:125px solid transparent;
+    border-bottom:130px solid  black;
+    border-left:125px solid  transparent;
+    border-right:125px solid  transparent;
+    animation: openup 1.1s ease-in;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    transform-origin:bottom;
+    
+}
+
+.normal:hover .incard{
+    display: block;
+    position: absolute;
+    translate: 12.5%;
+    width: 200px;
+    height: 155px;
+    overflow:hidden;
+    border-radius:10px;
+    animation: card 0.6s ease-in 0.4s forwards;
+    background-color:pink;
+}
+
+@keyframes color{
+    0%{
+        border-top: 130px solid white;
+    }
+    100%{
+        border-top: 130px solid black;
+    }
+}
+@keyframes open{
+    0%{
+        transform-origin:top;
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform-origin:top;
+        transform: rotateX(90deg);
+    }
+}
+@keyframes openup{
+    0%{
+        display: inline;
+        transform-origin:bottom;
+        transform: rotateX(90deg);
+    }
+    100%{
+        display: inline;
+        transform-origin:bottom;
+        transform: rotateX(0deg);
+    }
+}
+@keyframes card{
+    0%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(-50px);
+    }
+}
